@@ -1,0 +1,182 @@
+/*Elements.............Rules for the container and items
+ Modifiers............Media queries for the layout.
+  White spaces
+
+*/
+
+/* 
+
+1. This is a grid layout and settings + media queryk.
+
+2. This is a flex layout and setting + media queryk.
+
+3. This is a footer and settings + media queryk.
+
+*/
+
+/*------------------------------------------*\
+                     #GRID
+\*------------------------------------------*/
+
+
+.grid-container {   /* 1. */
+  display:              grid;
+  height:               200vh;
+  width:                40vw;
+  margin:               0 auto;
+  grid-template-columns:1fr;
+  grid-template-rows:   auto;
+  grid-template-areas:
+    "grid-item1" 
+    "grid-item2" 
+    "grid-item3" 
+    "grid-item4";
+  gap:                  2rem;
+  flex:                 1;
+    
+}
+
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 10fr 10fr 10fr 10fr;
+    grid-template-rows:    auto;
+    grid-template-areas:
+      "grid-item1 grid-item2 grid-item3 grid-item4";
+    height:                50vh;
+    width:                 100%;
+  }
+
+img {
+    width:                 60%;
+    height:                60%;
+
+}
+  }
+  
+  @media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 5fr;
+    grid-template-rows:    auto;
+    grid-template-areas:
+      "grid-item1"
+      "grid-item2"
+      "grid-item3"
+      "grid-item4"
+      "footer";
+    width:                 45%;
+    height:                45%;
+  }
+  
+  img {
+    width:                70%;
+    height:               60%;
+    padding:              5px;
+  }
+}
+
+
+
+
+/*------------------------------------------*\
+                     #FLEX BOX
+\*------------------------------------------*/
+
+
+.flex-container {  /* 2. */
+  display:        flex;
+  gap:            2rem;
+  flex-direction: column;
+  align-items:    center;
+  border:         3px solid gray;
+  vertical-align: middle;
+}
+
+.flex-item {
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  .flex-container  {
+  display:         flex;
+  gap:             2rem;
+  flex-direction:  row-reverse;
+  border:          3px solid gray;
+  text-align:      center;
+  vertical-align:  middle;
+  justify-content: space-around;
+    
+  }
+}
+
+@media (max-width: 1000px) {
+  .flex-container  {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-item {
+  text-align:      center;
+  align-items:     center;
+  
+  }
+}
+
+
+
+img {
+  border-radius: 45%;
+  width:         60%;
+  height:        60%;
+  padding:       10px;
+  filter:        drop-shadow(8px 8px 4px black) contrast(1.2) grayscale(40%);
+}
+
+
+
+
+
+/*------------------------------------------*\
+               #FOOTER
+\*------------------------------------------*/
+
+
+footer {     /* 3. */
+  height:      2vh;
+  width:       100vw;
+  background:  url(kepek/header.jpg);
+  font-family: 'Muli', sans-serif;
+  display:     table;
+  text-align:  center;
+  font-size:   1rem;
+}
+
+.footer-wrapper {
+  display:        table-cell;
+  vertical-align: middle;
+  padding:        .5rem 1rem;
+}
+
+
+footer a {
+  text-decoration: none;
+  color:           var(--main-color-pink);
+}
+
+a:hover {
+  color:      deeppink;
+  transition: all 1s ease;
+}
+
+ @media (min-width: 768px) {
+
+  footer {
+    min-height: 2vh;
+  }
+
+}
+
+

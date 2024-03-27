@@ -1,0 +1,215 @@
+/**
+HEADER
+GRID-CONTAINER, FOOTER
+BODY
+ASSISTANT-COLOR
+TRANSFORM
+KEYFRAMES
+*/
+
+/* 
+
+1. Font settings, background and color. --> header, h2, h3
+
+2. Body Background settings + media queryk.
+
+3. Rotates the image 360 ​​degrees.
+
+4. Enlarges the letter when the cursor is moved over it and the letter color will be changed.
+
+*/
+
+
+/*------------------------------------------*\
+                     #HEADER
+\*------------------------------------------*/
+
+header {
+    background:     url(kepek/header.jpg); /* 1. */
+    border-radius:  10px;
+    filter:         drop-shadow(16px 16px 20px black);
+    vertical-align: middle;
+    width:          100%;
+    height:         calc(100% - 80%);
+  }
+
+
+  @media (min-width: 768px) {
+    header {
+      width:     100%;
+      height:    calc(100% - 80%);
+    }
+  }
+
+
+  
+  h1 { 
+   font-family: "Comic Neue", cursive;  /* 1. */
+    text-align: center;
+    opacity:    1;
+    color:      var(--main-color-pink);
+  }
+  
+  h4 {
+    font-family: "Griffy", system-ui;  /* 1. */
+    font-size:   1.4rem;
+    text-align:  center;
+    opacity:     1;
+    color:       var(--main-color-pink);
+    padding:     var(--main-padding);
+  }
+
+  h4 a {  
+    text-decoration: none;  /* 1. */
+    color:           var(--main-color-pink);
+    font-weight:     600;
+  }
+  
+  
+  
+  /*------------------------------------------*\
+                       #BODY
+  \*------------------------------------------*/
+  
+  
+  
+  .background:after {
+    background: url(kepek/header.jpg); /* 2. */
+    background-size: cover;
+    filter:          blur(10px);
+    filter:          blur(10px);
+     content:        "";
+    position:        fixed;
+    top:             0;
+    left:            0;
+    right:           0;
+    bottom:          0;
+    z-index:        -1;
+  }
+  
+  
+  
+  
+  
+  @media (min-width: 768px) {
+
+       .background:after {
+        background:       url(kepek/header.jpg); 
+        background-size:  cover;
+        filter:           blur(10px);
+        filter:           blur(10px);
+         content:         "";
+        position:         fixed;
+        top:              0;
+        left:             0;
+        right:            0;
+        bottom:           0;
+        z-index:         -1;
+      }
+    }
+  
+  
+  
+  
+  
+  
+  /*------------------------------------------*\
+                #GRID CONTAINER
+  \*------------------------------------------*/
+  
+  
+  h2, h3 {
+    text-align:  center; /* 1. */
+    color:       var(--main-color-pink);
+    font-family: "Comic Neue", cursive;
+  }
+  
+  
+  /*------------------------------------------*\
+                       #FOOTER
+  \*------------------------------------------*/
+
+  footer {
+  
+    text-align: center; /* 1. */
+    color:      var(--main-color-pink);
+  
+  }
+
+  
+  
+  /*------------------------------------------*\
+                  #ASISTANT COLOR
+  \*------------------------------------------*/
+  
+  /*
+  .grid-item1 {
+    background-color: var(--main-color-pink);
+  }
+  
+  .grid-item2 {
+    background-color: var(--main-color-pink)
+  }
+  
+  .grid-item3 {
+    background-color: var(--main-color-pink);
+  }
+  
+  .grid-item4 {
+    background-color: var(--main-color-pink);
+  }
+  */
+  
+
+
+
+
+  /*------------------------------------------*\
+                 #TRANSFORM
+  \*------------------------------------------*/
+  
+  
+  img:hover {  /* 3. */
+    transform:  rotate(360deg);
+    transition: all 0.6s ease-out 0.10s;
+  }
+  
+  
+  h1:hover {
+    transform:  scale(1.40);  /* 4. */
+    transition: all .5s linear 0s;
+    color:      var(--main-color-white);
+  }
+  
+  h2:hover {
+    transform:  scale(1.40); /* 4. */
+    transition: all .5s linear 0s;
+    color:      var(--main-color-white);
+  }
+  
+  h3:hover {
+    transform:  scale(1.2); /* 4. */
+    transition: all 1s ease;
+    color:      var(--main-color-white);
+  }
+
+ 
+  
+  /*------------------------------------------*\
+                 #KEYFRAMES
+  \*------------------------------------------*/
+  
+  .key {
+    width:                80px;
+    height:               80px;
+    background-color:     var(--main-color-pink);
+    position:             relative;
+    animation:            circle 10s infinite;
+    border-radius:        50%;
+  }
+  
+
+  @keyframes circle {
+    0%    {left: 250px;}
+    100%  {left: 70%;}
+  }

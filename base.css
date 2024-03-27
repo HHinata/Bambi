@@ -1,0 +1,109 @@
+/*
+base.css --------------- CSS basic setup
+layout.css -------------Responsible for the layout of the site
+components.css----------Own CSS for the components that build up the page.
+*/
+
+
+/* Contets
+
+Settings
+-variables ------Globally-available variables.
+-box-sizing------better default values.
+-margins and paddings ---- global values.
+
+-Header and body--------h1-h4. and h2-h3 ---- Font size settings
+
+*/
+
+
+/*------------------------------------------*\
+                 #VARIABLES
+\*------------------------------------------*/
+
+
+:root {
+    --main-color-pink:      pink;
+    --main-color-white:     whitesmoke;
+    --main-padding:         15px;
+  }
+  
+  
+  /*------------------------------------------*\
+                  #BOX SIZING
+  \*------------------------------------------*/
+  
+  * {
+    box-sizing:  border-box;
+    margin:      0;
+    padding:     0;
+    text-align:  center;
+  }
+  
+  
+  /*------------------------------------------*\
+                       #HEADER
+  \*------------------------------------------*/
+  
+  
+  h1, h4 {
+   padding:     var(--main-padding);
+    }
+  
+  h1 {
+   font-size:   clamp(18px, 5vw, 50px); 
+  }
+  
+  h4 {
+    font-size:   1.25rem;
+  }
+  
+  
+  /*------------------------------------------*\
+                 #BODY
+  \*------------------------------------------*/
+  
+  h2, h3 {
+   font-size:   clamp(15px, 4vw, 30px); 
+  }
+  
+  
+  
+  /*------------------------------------------*\
+                 #GRID CONTAINER
+  \*------------------------------------------*/
+  
+  
+  h2, h3 {
+    padding:     var(--main-padding);
+  }
+  
+  
+  /*------------------------------------------*\
+                 #FLEX ITEMS
+  \*------------------------------------------*/
+  
+  
+  .flex-item {
+    font-size:    max(24px, 1vw);
+  }
+  
+  
+  
+  /*------------------------------------------*\
+                       #FOOTER
+  \*------------------------------------------*/
+  
+  p {
+    font-size:   25px;
+    padding:     var(--main-padding);
+  }
+  
+  footer p {
+    margin-bottom:  0;
+  }
+  
+  footer small {
+    line-height:    1.5;
+  }
+  
