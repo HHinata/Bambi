@@ -36,6 +36,14 @@
     
 }
 
+img {
+  border-radius: 45%;
+  width:         60%;
+  height:        60%;
+  padding:       10px;
+  filter:        drop-shadow(8px 8px 4px black) contrast(1.2) grayscale(40%);
+}
+
 
 @media (min-width: 768px) {
   .grid-container {
@@ -50,6 +58,7 @@
 img {
     width:                 60%;
     height:                60%;
+    padding:               10px;
 
 }
   }
@@ -127,13 +136,7 @@ img {
 
 
 
-img {
-  border-radius: 45%;
-  width:         60%;
-  height:        60%;
-  padding:       10px;
-  filter:        drop-shadow(8px 8px 4px black) contrast(1.2) grayscale(40%);
-}
+
 
 
 
